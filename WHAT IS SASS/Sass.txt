@@ -1,0 +1,132 @@
+SASS 
+Syntactically Awesome Style Sheets
+Apa itu CSS Pre-Prosesor ?
+kenapa disebut dengan CSS Pre-Prosesor ? 
+karena file yang kita buat / kita edit dilakukan sebelum file css dibuat / dicompile
+
+kenapa kita harus pakai CSS Pre-Prosesor ?
+-> mempermudah penulisan 
+-> mempermudah pengelolaan
+-> memiliki banyak fungsi Built-in
+-> kita dapat membuat fungsi sendiri
+-> kita dapat memodifikasi framework CSS (Bootstrap / Materialize)
+-> Banyak perusahaan menggunakan SASS
+
+karena dirasa ada "Kekurangan" Pada CSS dimana : 1. Tidak ada variable
+  2. Tidak ada function
+  3. Tidak ada modularisasi
+  4. Tidak bisa melakukan operasi & logika pemrogaman
+  5. Banyak duplikasi kode
+
+Nah maka dai itu dibuatkanlha SASS Yang dimana mengatasi Kekurangan tersebut diantaranya : 
+1. Membuat variable
+2. Mixin membuat serangkain style yang berulang kali
+3. Import & Uses
+4. Operator & Built-in function
+5. Nested CSS (Teknik Nesting)
+
+CSS Pre-Prosesor itu ada 3 yaitu : SASS, Less, Stylus
+
+untuk membuat file sass, menggunakan akhiran 
+(.sass / .scss) untuk membuatnya
+
+Alasan untuk tidak menggunakan SASS :
+1. Banyak fitur SASS yang sekrang sudah dimiliki oles CSS
+2. Tidak untuk project kecil
+3. Styled Components / CSS in Js
+
+Nesting
+Digunakan untuk membuat hirarki visual yang jelas untuk selector CSS kita
+
+di sass ada sebuah simbol yaitu (&) disebut sebagai parent selector, jadi kita bisa menarget element parent pada saat kita Nesting
+parent selector juga bisa digunakan untuk menambahkan psuedo class
+
+variable
+Perbedaan pembuatan variable pada css & scss dimana di css menggunakan sintaks :root / 
+pakai tanda (--nama-variable) untuk membuat varibale css pada element :root
+didalam element nya sedangkan pada scss dengan menggunakan sintaks $ untuk mendeklarasikannya
+
+di dalam sass tanda (- dan _) adalah sebuah simbol untuk mendefinisikan sebuah variable dan digunakan sebagai pemisah kata
+
+di dalam sass ada lingkup scope pada variable
+kalau kita membuat nama variable yang sama dengan scope yang beda maka variable tersebut adalah variable yang berbeda
+
+ada sebuah keyword untuk melakukan teknik mapping (map) pada sass menggunakan method map-get($key, 'value');
+sintaks:
+$key:(
+  'var1': bold,
+  'var2': 1em,
+  'var3': red
+);
+
+.container{
+  background: map-get($key, 'var3');
+}
+
+Mixin
+Mixin adalah kumpulan style yang bisa kita gunakan secara berulang ulang. Ada 2 buah keyword yang kita gunakan dalam menggunakan mixin  dan @include yaitu : 
+1. @mixin : dimana kita membuat mixinnya
+contoh sintaks : 
+  @mixin namaMixin {
+    //statements
+  }
+  atau
+
+  @mixin namaMixin($args){
+    //statements
+  }
+
+  didalam @mixin juga kita bisa membuat suatu parameters default
+  contoh:
+    @mixin namaMixin($default: valueDeafault){
+      display: $default;
+    }
+  jadi, ketika kita manggil tanpa parameters pun tidak masalah karena sudah ada nilai defaultnya
+  dan mixin juga bisa menerima multiple arguments, sesuai kebutuhan yang diperlukan
+
+2. @include : memanggil mixin yang kita buat
+ untuk memanggil @include pada mixin yang kita buat harus menggunakan kurung buka & kurung tutup ();
+
+Modules
+Modules adalah sebuah teknik dimana membuat code sass kita menjadi modular / mudah untuk di kelola
+untuk menggunakan modules, perlu diingat ada 2 keyword yang digunakan didalamnya yaitu : 
+1. @import
+ Dengan menggunakan @import kita bisa memisahkan files scss kita sehingga kalau kita pakai tinggal panggil sesuai alamat / url dari file scss kita
+
+ Tips saja untuk membuat file baru dimana bukan file utamanya didepan nama file nya tambahkan _lalu nama file nya, supaya biar tahu kalau file tersebut merupakan pharsials file.
+ Dan pharsials file juga tidak melalui proses compilasi
+
+ Kekurangan dari @import :
+ -> Membuat semua variables, mixin, dan juga function menjadi global scope dan mudah untuk diakses
+ contoh: misal kita menemukan varible yang sama terjadilah bentrok pada variable tersebut
+
+ -> Ketika kita melakukan pewarisan pada sass makin lama jadi makin bingung style mana yang harus diwariskan
+
+ -> ketika kita menggunakan @import berulanga kali maka waktu execute / compile nya jadi lebih besar
+
+2. @use
+  Kekurangan @use: 
+  -> @use hanya berjalan pada sass yang versi   dart nya
+
+  untuk memanggil @use harus pakai namespace / as
+
+Flow Control
+Mengatur alur kendali dari script SASS
+di dalam flow control ada berbeda keyword yang digunakan yaitu:
+1. @if, @else, @else if
+2. @for
+3. @while
+4. @each
+#{$namaVar} buat akses interppolasi pada variable
+
+Built-In function / Modules
+atau bisa juga disebut fungsi-fungsi bawaan dari SASS
+layaknya bahasa pemrogaman lainnya, namun pada css
+diantaranya:
+-> sass:color
+-> sass:list
+-> sass:math
+-> sass:map
+-> sass:meta
+-> sass:selector
+-> sass:string

@@ -1,0 +1,16 @@
+@use 'mixin';
+
+.footer ul {
+    @include mixin.inline-list();
+    margin-top: 20px;
+
+    li {
+        padding: .5em;
+        background-color: violet;
+    }
+
+    a {
+        color: #f9f9f9;
+        text-decoration: none;
+    }
+}

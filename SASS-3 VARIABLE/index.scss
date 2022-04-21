@@ -1,0 +1,93 @@
+// Membuat Variable dengan Css
+// :root {
+//     --primary-color: #add894;
+//     --secondary-color: #ce6510;
+//     --text-color: #0d1ac5;
+// }
+
+// body {
+//     background-color: var(--primary-color);
+// }
+
+// .container {
+//     width: 700px;
+//     height: 850px;
+//     margin: 50px auto;
+
+//     h1 {
+//         color: var(--text-color);
+//         font-size: 4rem;
+//     }
+
+//     p {
+//         color: var(--secondary-color);
+//         font-size: 1.7rem;
+//         line-height: 40px;
+//         letter-spacing: 1px;
+//     }
+// }
+
+// Membuat variable dengan Sass
+// global variable
+$primary-color: green;
+$secondary-color: #ce6510;
+$text-color:#0d1ac5;
+
+body {
+    // local variable
+    $primary-color: #add894;
+    // $primary-color: #add894 !global;
+    // cara menjadikan yang awalnya variable local jadi global menggunakan sintaks !global
+    background-color: $primary-color;
+}
+
+.container {
+    width: 600px;
+    margin: 50px auto;
+
+    h1 {
+        color: $secondary-color;
+        font-size: 2.5rem;
+    }
+
+    p {
+        color: $text-color;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+}
+
+// mapping pada variable
+$button:('succes': #36f110,
+    'danger': #db1e17,
+    'warning': #ce8c13);
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 25px;
+        background-color: map-get($button, 'succes');
+        border: 1px solid #ce6510;
+        border-radius: .5rem;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.7em;
+        color: map-get($button, 'danger');
+    }
+
+    li:hover {
+        transform: scale(1.2);
+    }
+}

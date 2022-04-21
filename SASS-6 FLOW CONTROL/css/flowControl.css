@@ -1,0 +1,145 @@
+.kotak-profile {
+  width: 200px;
+  height: 200px;
+  border: 5px solid lightblue;
+  box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.3);
+}
+
+.circle-profile {
+  width: 100px;
+  height: 100px;
+  border: 5px solid lightblue;
+  box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.3);
+  border-radius: 50%;
+}
+
+body {
+  background-color: #999;
+  color: #ddd;
+  min-height: 1000px;
+}
+
+.segitiga {
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1em;
+  border-left-color: blue;
+}
+
+.gradient {
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+.gradient li:nth-child(1) {
+  padding: 4px;
+  background-color: #ff0f0f;
+}
+.gradient li:nth-child(2) {
+  padding: 4px;
+  background-color: #ff1f1f;
+}
+.gradient li:nth-child(3) {
+  padding: 4px;
+  background-color: #ff2e2e;
+}
+.gradient li:nth-child(4) {
+  padding: 4px;
+  background-color: #ff3d3d;
+}
+.gradient li:nth-child(5) {
+  padding: 4px;
+  background-color: #ff4d4d;
+}
+.gradient li:nth-child(6) {
+  padding: 4px;
+  background-color: #ff5c5c;
+}
+.gradient li:nth-child(7) {
+  padding: 4px;
+  background-color: #ff6b6b;
+}
+.gradient li:nth-child(8) {
+  padding: 4px;
+  background-color: #ff7a7a;
+}
+.gradient li:nth-child(9) {
+  padding: 4px;
+  background-color: #ff8a8a;
+}
+.gradient li:nth-child(10) {
+  padding: 4px;
+  background-color: #ff9999;
+}
+
+.gradient2 {
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+.gradient2 li:nth-child(1) {
+  padding: 4px;
+  background-color: #007100;
+}
+.gradient2 li:nth-child(2) {
+  padding: 4px;
+  background-color: #006100;
+}
+.gradient2 li:nth-child(3) {
+  padding: 4px;
+  background-color: #005200;
+}
+.gradient2 li:nth-child(4) {
+  padding: 4px;
+  background-color: #004300;
+}
+.gradient2 li:nth-child(5) {
+  padding: 4px;
+  background-color: #003400;
+}
+.gradient2 li:nth-child(6) {
+  padding: 4px;
+  background-color: #002400;
+}
+.gradient2 li:nth-child(7) {
+  padding: 4px;
+  background-color: #001500;
+}
+.gradient2 li:nth-child(8) {
+  padding: 4px;
+  background-color: #000600;
+}
+.gradient2 li:nth-child(9) {
+  padding: 4px;
+  background-color: black;
+}
+.gradient2 li:nth-child(10) {
+  padding: 4px;
+  background-color: black;
+}
+
+.sosial {
+  font-size: 2em;
+  font-family: arial;
+  font-weight: bolder;
+}
+.sosial .instagram {
+  color: #ec1dec;
+}
+.sosial .youtube {
+  color: #f32727;
+}
+.sosial .facebook {
+  color: #121ecc;
+}
+.sosial .twitter {
+  color: #14c42b;
+}
+.sosial .twitch {
+  color: #cea316;
+}
+
+/*# sourceMappingURL=flowControl.css.map */

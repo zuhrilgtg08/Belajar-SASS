@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAmCA,AACI,KADC,CACE,aAAQ,CAAC;EACR,SAAS,EAAE,GAAG;CACjB;;AAHL,AAKI,KALC,CAKE,cAAS,CAAC;EACT,SAAS,EAAE,KAAK;CACnB;;AAGL,AACI,OADG,CACA,eAAQ,CAAC;EACR,SAAS,EAAE,GAAG;CACjB;;AAHL,AAKI,OALG,CAKA,gBAAS,CAAC;EACT,SAAS,EAAE,KAAK;CACnB",
+    "sources": [
+        "../SASS-2 NESTING/index.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

@@ -1,0 +1,18 @@
+// mixin
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
+// arguments pada mixin
+@mixin flexBox($value: center, $direction: row) {
+    display: flex;
+    justify-content: $value;
+    align-items: center;
+    flex-direction: $direction;
+}

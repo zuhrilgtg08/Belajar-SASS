@@ -1,0 +1,76 @@
+// Pakai css biasa
+// .header ul,
+// .footer ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// .header ul li,
+// .footer ul li {
+//     display: inline-block;
+// }
+
+// mixin
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+    }
+}
+
+.header ul {
+    @include inline-list();
+
+    li {
+        background-color: #cacaca;
+        padding: .7em;
+    }
+
+    a {
+        text-decoration: none;
+        color: green;
+    }
+}
+
+.footer ul {
+    @include inline-list();
+    margin-top: 20px;
+
+    li {
+        padding: .5em;
+        background-color: violet;
+    }
+
+    a {
+        color: #f9f9f9;
+        text-decoration: none;
+    }
+}
+
+// arguments pada @mixin
+@mixin flexBox($value: center, $direction: row) {
+    display: flex;
+    justify-content: $value;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+.container {
+    @include flexBox(space-evenly, row-reverse);
+    width: 400px;
+    height: 200px;
+    background-color: lightsalmon;
+    border-radius: 15px;
+
+    .box {
+        width: 50px;
+        height: 50px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 50px;
+    }
+}

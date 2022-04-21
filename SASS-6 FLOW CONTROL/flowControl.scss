@@ -1,0 +1,128 @@
+// if
+@mixin profile-picture($size, $circle: false) {
+    width: $size;
+    height: $size;
+    border: 5px solid lightblue;
+    box-shadow: 1px 1px 3px rgba($color: #333, $alpha: 0.3);
+
+    @if $circle {
+        border-radius: 50%;
+    }
+}
+
+.kotak-profile {
+    @include profile-picture(200px, $circle: false);
+}
+
+.circle-profile {
+    @include profile-picture(100px, true);
+}
+
+// else
+$light-bg: #fcfcfc;
+$light-text: #333;
+$dark-bg: #999;
+$dark-text: #ddd;
+
+@mixin color-mode($light-mode: true) {
+    @if $light-mode {
+        background-color: $light-bg;
+        color: $light-text;
+    }
+
+    @else {
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+}
+
+body {
+    @include color-mode(false);
+    min-height: 1000px;
+}
+
+// else if
+@mixin segitiga($size, $color, $direction) {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-color: transparent;
+    border-style: solid;
+    border-width: calc($size / 2);
+
+    @if $direction==up {
+        border-bottom-color: $color;
+    }
+
+    @else if $direction==right {
+        border-left-color: $color;
+    }
+
+    @else if $direction==down {
+        border-top-color: $color;
+    }
+
+    @else {
+        border-right-color: $color;
+    }
+}
+
+.segitiga {
+    @include segitiga(2em, blue, right);
+}
+
+// for
+$color: red;
+
+.gradient {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+
+    @for $i from 1 to 11 {
+        li:nth-child(#{$i}) {
+            padding: 4px;
+            background-color: lighten($color, $i * 3%);
+        }
+    }
+}
+
+// while
+$color: green;
+
+.gradient2 {
+    margin-top: 15px;
+    padding: 0;
+    list-style: none;
+
+    $i: 1;
+
+    @while $i < 11 {
+        li:nth-child(#{$i}) {
+            padding: 4px;
+            background-color: darken($color, $i * 3%);
+        }
+
+        $i: $i+1;
+    }
+}
+
+// each
+$sosial-color:(instagram: #ec1dec,
+    youtube: #f32727,
+    facebook: #121ecc,
+    twitter: #14c42b,
+    twitch: #cea316);
+
+.sosial {
+    font-size: 2em;
+    font-family: arial;
+    font-weight: bolder;
+
+    @each $sosial,
+    $color in $sosial-color {
+        .#{$sosial} {
+            color: $color;
+        }
+    }
+}

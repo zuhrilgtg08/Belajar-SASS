@@ -1,0 +1,50 @@
+$backgound-primary: #1a10aa;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: $backgound-primary;
+
+    .logo {
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        color: #fff;
+        font-weight: bolder;
+    }
+
+    .navbar a {
+        margin-left: 2rem;
+        font-size: 1.7rem;
+        color: #fff;
+    }
+
+    .navbar a:hover {
+        color: salmon;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 9rem;
+    gap: 1.5rem;
+
+    h2 {
+        font-size: 1.5rem;
+        color: #1a10aa;
+        font-weight: bolder;
+    }
+
+    p {
+        color: salmon;
+        font-size: 1.3rem;
+    }
+}

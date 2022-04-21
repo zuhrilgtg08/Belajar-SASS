@@ -1,0 +1,72 @@
+$warna-dasar: #fa8072;
+
+h1 {
+    color: $warna-dasar;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+// Built-in Function:Color
+// adjust-color()
+h1 {
+    color: adjust-color(
+        $color: $warna-dasar, 
+        $green: 100, 
+        $blue: 100, 
+        $red: -50
+    );
+}
+
+// adjust-hue()
+// h1 {
+//     color: adjust-hue(
+//         $color: $warna-dasar, 
+//         $degrees: 30deg
+//     );
+// }
+
+// complement($color) warna yang berseberangan
+// h1 {
+//     color: complement($color: $warna-dasar);
+// }
+
+// darken membuat warnanya menjauhi radius roda warnanya
+// h1{
+//     color: darken($color: $warna-dasar, $amount: 20%);
+// }
+
+// lighten mendekati ke poros tengah dari roda warnanya
+// h1 {
+//     color: lighten($color: $warna-dasar, $amount: 20%);
+// }
+
+// saturate($color, $amount) => tambah mencolok / nambah warna
+// h1{
+//     color: saturate($color: $warna-dasar, $amount: 30%);
+// }
+
+// desaturate($color, $amount) => ngilangin / ngurangin warna
+// h1 {
+//     color: desaturate($color: $warna-dasar, $amount: 50%);
+// }
+
+// grayscale($color) => membuat warna desaturate 100%
+// h1 {
+//     color: grayscale($color: $warna-dasar);
+// }
+
+// mix ($color1, $color2, weight: 50%) => campur warna
+// h1 {
+//     color: mix($warna-dasar, #20c910, 80%);
+// }
+
+// fade-in($color, $amount) => membuat suatu element yang awalnya transparant jadi solid
+// h1 {
+//     color: fade-in(rgba(250, 120, 114, 0.2), 0.5);
+// }
+
+// fade-out($color, $amount) => yang awalnya solid jadi transparent
+// h1 {
+//     color: fade-out($warna-dasar, 0.4);
+// }

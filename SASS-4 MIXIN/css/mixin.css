@@ -1,0 +1,70 @@
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header ul li {
+    display: inline-block;
+}
+
+.header ul li {
+    background-color: #cacaca;
+    padding: .7em;
+}
+
+.header ul a {
+    text-decoration: none;
+    color: green;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer ul li {
+    display: inline-block;
+}
+
+.footer ul li {
+    padding: .5em;
+    background-color: violet;
+}
+
+.footer ul a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    width: 400px;
+    height: 200px;
+    background-color: lightsalmon;
+    border-radius: 15px;
+}
+
+.container .box {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*# sourceMappingURL=mixin.css.map */
